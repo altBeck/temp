@@ -12,83 +12,71 @@
     <!-- Locomotive Scroll -->
     <script type="text/javascript" src="app/script.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.1/dist/locomotive-scroll.min.css"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.1/dist/locomotive-scroll.min.js"></script>
 
     <!-- Navbar -->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
-    <div id="header" class="section sticky top-0 w-full text-white bg-jet" data-scroll-section>
-      <div x-data="{ open: false }" class="section flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8" data-scroll-section>
-        <div class="container p-4 flex flex-row items-center justify-between sticky">
-          <a href="#" class="text-lg font-extralight tracking-widest">BECK KANNO</a>
-          <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
-            <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
-              <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
-              <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+    <div id="header" class="section absolute top-0 w-full text-white" data-scroll-section>
+      <div x-data="{ open: false }" class="section flex flex-col p-5" data-scroll-section>
+        <div class="z-50 p-4 flex flex-row items-center justify-between sticky">
+          <a href="" class="text-sm text-black font-extralight tracking-widest border-2 border-solid p-3 border-black rounded-full">BECK KANNO</a>
+          <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
+          <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
+              
+              <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="27" cy="27" r="26" stroke="#3A3A3E" stroke-width="2"/>
+              <path  x-show="!open" fill-rule="evenodd" d="M18 21H36 M18 33H36 M18 27H36" stroke="#3A3A3E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" clip-rule="evenodd"/>
+              <path x-show="open" d="M33 21L21 33 M21 21L33 33" stroke="#3A3A3E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" clip-rule="evenodd"/>
             </svg>
+            
           </button>
         </div>
-        <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row place-items-center">
-          <a class="px-4 py-2 mt-2 text-md hover:text-lg hover:font-semibold" href="#">About</a>
-          <a class="px-4 py-2 mt-2 text-md hover:text-lg hover:font-semibold" href="#">Resume</a>
-          <a class="px-4 py-2 mt-2 text-md hover:text-lg hover:font-semibold" href="#">Contact</a>
-          </div>    
-        </nav>
-      </div>
+        <nav :class="{'flex': open, 'hidden': !open}" class="md:hidden bg-gradient-to-r from-cyan-500 to-blue-500 bg-hero-pattern rounded-lg m-5 flex-col flex-grow pb-4 md:pb-0 hidden  md:justify-end md:flex-row place-items-center">
+          <a class="px-4 py-2 mt-2 text-md hover:text-lg hover:font-semibold" href="#" target="_blank">About</a>
+          <a class="px-4 py-2 mt-2 text-md hover:text-lg hover:font-semibold" href="https://drive.google.com/file/d/1QRSB8tpIieI8wQn52LVVZadEa8Kci0Nd/view?usp=sharing" target="_blank">Resume</a>
+          <a class="px-4 py-2 mt-2 text-md hover:text-lg hover:font-semibold" href="#" target="_blank">Contact</a>
+        </div>    
+      </nav>
+    </div>
+  </div>
+
+  <section class="text-black pt-80 p-8">
+    <div class="flex justify-between">
+      <h1 class="font-semibold text-5xl">Design <br> & Code<span class="inline-flex text-green-600">.</span></h1>
+      <svg class="animate-bounce mt-14" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 5V19" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M19 12L12 19L5 12" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>        
+    </div>
+    <div>
+      <h2 class="mt-4">I’m a frontend-designer
+        crafting user-centric
+        experiences for startups
+        & businesses.</h2>
+    </div>
+    <div class="flex flex-row max-w-screen-xl mt-20 mb-24">
+
+      <ul class="mt-5 flex space-x-4 ml">
+        <li>
+          <a href="https://dribbble.com/bekkr" target="_blank"><img src="assets/dribbble.svg" alt="Dribbble Icon"></a>
+        </li>
+        <li>
+          <a href="https://linkedin.com/in/kanno-beck" target="_blank"><img src="assets/linkedin.svg" alt="Linkedin Icon"></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/designrgodd" target="_blank"><img src="assets/twitter.svg" alt="Twitter Icon"></a>
+        </li>
+      </ul>
     </div>
 
-    <div id="intro" class="pl-8 mt-10 md:mt-20 w-full flex flex-col flex-grow" data-scroll-section>
-      <div>
-        <h1 class=" container flex flex-col max-w-screen-xl mx-auto md:flex-row md:px-6 lg:px-8 tracking-widest font-extralight" data-scroll data-scroll-repeat>BECK KANNO</h1>
+  </section>
 
-        <h2 class="max-w-screen-xl mx-auto md:flex-row md:px-6 lg:px-8 md:text-5xl text-2xl font-semibold md:mt-4 mt-2">Digital Product Designer<span class="inline-flex text-green-600">.</span></h2>
-        <p class="flex flex-col max-w-screen-xl mx-auto md:flex-row md:px-6 lg:px-8 pr-8 text-sm md:text-xl mt-2 md:hidden">I TURN IDEAS INTO AMAZING PROJECTS THROUGH THE WORLD OF CREATIVE AND INTERACTIVE IDEAS WITH DESIGN & CODE.</p>
-        <p class="flex flex-col max-w-screen-xl mx-auto md:flex-row md:px-6 lg:px-8 pl-8 text-sm md:text-xl mt-2  tab:hidden">I TURN IDEAS INTO AMAZING PROJECTS THROUGH THE WORLD OF<br> CREATIVE AND INTERACTIVE IDEAS WITH DESIGN & CODE.</span></p>
-        </div>
-
-      <img class="flex sm:hidden ml-5
-      mt-14 w-2/3" src="assets/beck.svg" alt="Beck Image">
+  <section></section>
       
-    <section class="section" data-scroll-section>
-      <div class="flex mx-auto md:flex-row text-white px md:px-6 md:mt-40">
-        <a class="mt-8 md:mt-4 flex items-center bg-black hover:bg-jet hover:ring ring-green-500 lg:ml-1 xl:ml-8.5 max:ml-16 2xl:ml-142 py-5 px-4 rounded-md" href="#portfolio" data-scroll-to>VIEW PORTFOLIO
-          <span class="inline-flex place-items-center">
-            <svg class="w-4" width="2" height="25" viewBox="0 0 2 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="1.5" height="25" rx="0.75" fill="#3A3A3E"/>
-            </svg>
-              
-            <svg class="w-4" width="12" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1.375 0.491188L5.01332 4.95785C5.01332 4.95785 1.47695 9.29946 1.37746 9.42197" stroke="#22C55E" stroke-width="1.5"/>
-              <path d="M5.8074 0.476189L9.44573 4.94286L5.8074 9.40952" stroke="#22C55E" stroke-width="1.5"/>
-            </svg>
-          </span>
-        </a>
-      </div>
-
-      <div class="flex flex-col max-w-screen-xl md:flex-row md:px-12 mb-20 md:mb-32">
-
-        <ul class="mt-5 flex space-x-4 ml">
-          <li>
-            <a href="#"><img src="assets/dribbble.svg" alt="Dribbble Icon"></a>
-          </li>
-          <li>
-            <a href="#"><img src="assets/linkedin.svg" alt="Linkedin Icon"></a>
-          </li>
-          <li>
-            <a href="#"><img src="assets/twitter.svg" alt="Twitter Icon"></a>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-
-    </div>
-
     <section id="portfolio" class="sticky top-0 p-5 md:p-24 md:-mt-16 bg-black -mt-2">
-      <div class="flex flex-col max-w-screen-xl mx-auto md:flex-row md:text-5xl text-2xl font-bold mt-5">
-        <h1 class="text-white">SELECTED PROJECTS<span class="text-green-500">.</span></h1>
+      <div class="flex flex-col max-w-screen-xl mx-auto md:flex-row md:text-5xl  font-bold mt-5">
+        <h1 class="text-white font-extralight tracking-widest">SELECTED PROJECTS<span class="text-green-500">.</span></h1>
         </div>
         
         <section class="mt-14 rounded-xl bg-zinc-900 space-y-4 p-6 scroll-smooth">
