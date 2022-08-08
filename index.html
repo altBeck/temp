@@ -19,29 +19,27 @@
 
     <div id="header" class="section absolute top-0 w-full text-white" data-scroll-section>
       <div x-data="{ open: false }" class="section flex flex-col p-5" data-scroll-section>
-        <div class="z-50 p-4 flex flex-row items-center justify-between sticky">
-          <a href="" class="text-sm text-black font-extralight tracking-widest border-2 border-solid p-3 border-black rounded-full">BECK KANNO</a>
+        <div class="z-50 p-4 flex flex-row items-center justify-between sticky top-0">
+          <a href="" class="text-sm text-black font-extralight tracking-widest border border-solid p-3 border-petal rounded-full">BECK KANNO</a>
           <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
-          <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
-              
-              <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="27" cy="27" r="26" stroke="#3A3A3E" stroke-width="2"/>
+          <button class="rounded-lg  focus:outline-none focus:shadow-outline" @click="open = !open">              
+            <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="27" cy="27" r="26" stroke="#3A3A3E" stroke-width="2"/>
               <path  x-show="!open" fill-rule="evenodd" d="M18 21H36 M18 33H36 M18 27H36" stroke="#3A3A3E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" clip-rule="evenodd"/>
               <path x-show="open" d="M33 21L21 33 M21 21L33 33" stroke="#3A3A3E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" clip-rule="evenodd"/>
             </svg>
             
           </button>
         </div>
-        <nav :class="{'flex': open, 'hidden': !open}" class="md:hidden bg-gradient-to-r from-cyan-500 to-blue-500 bg-hero-pattern rounded-lg m-5 flex-col flex-grow pb-4 md:pb-0 hidden  md:justify-end md:flex-row place-items-center">
+        <nav :class="{'flex': open, 'hidden': !open}" class="absolute top-24 w-64 right-5 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg m-5 flex-col pb-4 place-items-center text-lg">
           <a class="px-4 py-2 mt-2 text-md hover:text-lg hover:font-semibold" href="#" target="_blank">About</a>
           <a class="px-4 py-2 mt-2 text-md hover:text-lg hover:font-semibold" href="https://drive.google.com/file/d/1QRSB8tpIieI8wQn52LVVZadEa8Kci0Nd/view?usp=sharing" target="_blank">Resume</a>
           <a class="px-4 py-2 mt-2 text-md hover:text-lg hover:font-semibold" href="#" target="_blank">Contact</a>
-        </div>    
-      </nav>
+        </nav>
+      </div>
     </div>
-  </div>
 
-  <section class="text-black pt-80 p-8">
+  <section class="pt-80 p-8">
     <div class="flex justify-between">
       <h1 class="font-semibold text-5xl">Design <br> & Code<span class="inline-flex text-green-600">.</span></h1>
       <svg class="animate-bounce mt-14" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -50,12 +48,9 @@
       </svg>        
     </div>
     <div>
-      <h2 class="mt-4">I’m a frontend-designer
-        crafting user-centric
-        experiences for startups
-        & businesses.</h2>
+      <h2 class="mt-4 text-sea">I’m a frontend-designer <br> crafting user-centric <br> experiences for startups <br> & businesses.</h2>
     </div>
-    <div class="flex flex-row max-w-screen-xl mt-20 mb-24">
+    <div class="flex flex-row max-w-screen-xl mt-20 md:mt-10 mb-24">
 
       <ul class="mt-5 flex space-x-4 ml">
         <li>
@@ -71,77 +66,82 @@
     </div>
 
   </section>
-
-  <section></section>
       
-    <section id="portfolio" class="sticky top-0 p-5 md:p-24 md:-mt-16 bg-black -mt-2">
-      <div class="flex flex-col max-w-screen-xl mx-auto md:flex-row md:text-5xl  font-bold mt-5">
-        <h1 class="text-white font-extralight tracking-widest">SELECTED PROJECTS<span class="text-green-500">.</span></h1>
-        </div>
+  <section id="portfolio" class="p-5 md:p-24 md:-mt-16 bg-gloom">
+    <div class="flex flex-col max-w-screen-xl mx-auto md:flex-row md:text-5xl  font-bold mt-5">
+      <h1 class="text-white font-extralight tracking-widest text-base">SELECTED PROJECTS<span class="text-green-500">.</span></h1>
+      </div>
         
-        <section class="mt-14 rounded-xl bg-zinc-900 space-y-4 p-6 scroll-smooth">
+      <section class="mt-14 rounded-xl space-y-4 scroll-smooth">
 
-          <div class="grid grid-rows-4 grid-flow-col gap-6 lg:grid-cols-2 lg:grid-rows-2">
-            <div class="bg-zinc-800 rounded-xl px-6 py-1">
-              <div class="mt-5 font-bold text-xl italic text-slate-300">
-                SAVIT BUDGET APP
-                <img class="mt-8" src="assets/i.svg" alt="Savit Budget App">
-              </div>
-              <div>
-                <p class="mt-5 font-normal text-white">This is a savings tracker app that helps users save and track their expenses with data.</p>
-              </div>
-              <div class="mt-5">
-                <a class="px-5 py-5 rounded-md mt-6" href="#"></a>
-              </div>
-              <div class="mb-10 font-medium scroll-smooth">
-                <a class="px-5 py-3 bg-emerald-700 hover:bg-emerald-900 text-white rounded-md" href="#" target="_blank">View Project</a>
-              </div>
+        <div class="grid grid-rows-4 grid-flow-col gap-6 lg:grid-cols-2 lg:grid-rows-2">
+          <div class="bg-zinc-900 rounded-xl px-6 py-1">
+            <div class="mt-5 font-bold text-xl italic text-slate-300">
+              SAVIT BUDGET APP
+              <img class="mt-8" src="assets/i.svg" alt="Savit Budget App">
             </div>
-
-            <div class="bg-zinc-800 rounded-xl px-6 py-1">
-              <div class="mt-5 font-bold text-xl italic text-slate-300">
-                DESIGN SYSTEM
-              </div>
+            <div>
+              <p class="mt-5 font-normal text-white">This is a savings tracker app that helps users save and track their expenses with data</p>
             </div>
-
-            <div class="bg-zinc-800 rounded-xl px-6 py-1">
-              <div class="mt-5 font-bold text-xl italic text-slate-300">
-                LANDING PAGE (LIVE)
-              </div>
+            <div class="mt-5">
+              <a class="px-5 py-5 rounded-md mt-6" href="#"></a>
             </div>
+            <div class="mb-10 font-medium scroll-smooth">
+              <a class="px-5 py-3 bg-emerald-700 hover:bg-emerald-900 text-white rounded-md" href="#" target="_blank">View Project</a>
+            </div>
+          </div>
 
-            <div class="bg-zinc-800 rounded-xl px-6 py-1">
+          <div class="bg-zinc-800 rounded-xl px-6 py-1">
+            <div class="mt-5 font-bold text-xl italic text-slate-300">
+              DESIGN SYSTEM
+            </div>
+          </div>
+
+          <div class="bg-zinc-800 rounded-xl px-6 py-1">
+            <div class="mt-5 font-bold text-xl italic text-slate-300">
+              LANDING PAGE (LIVE)
+            </div>
+          </div>
+
+          <div class="bg-zinc-800 rounded-xl px-6 py-1">
+            <div class="mt-5 font-bold text-xl italic text-slate-300">
+              API-CONNECTED WEBSITE
+            </div>
+          </div>
+        </div>
+      </section>          
+      
+
+      <!-- Miscellaneous Projects -->
+      <section>
+        <header class="mt-16 rounded-xl bg-zinc-900 space-y-4 p-6 scroll-smooth">
+          <div class="flex items-center justify-between">
+            <h2 class="font-semibold text-white text-lg mt-2">Miscellaneous Projects<span class="text-green-500">.</span></h2>
+          </div>
+
+          <div class="relative grid lg:grid-cols-2 gap-4 pb-10">
+            <h1 class="absolute left-3 text-lg italic text-slate-300 font-semibold top-4">MY BLENDER <br> PROJECTS</h1>
+            <a href="" class="rounded-xl font-bold text-xl "><img src="assets/iv.svg" alt="">    
+            </a>
+
+            <div class="bg-zinc-800 rounded-xl px-6 py-16">
               <div class="mt-5 font-bold text-xl italic text-slate-300">
-                API-CONNECTED WEBSITE
+                WEBSITE
               </div>
             </div>
           </div>
-        </section>          
-      
+        </header>
+      </section>
+    </div>
+  </section>
 
-        <!-- Miscellaneous Projects -->
-        <section>
-          <header class="mt-16 rounded-xl bg-zinc-900 space-y-4 p-6 scroll-smooth">
-            <div class="flex items-center justify-between">
-              <h2 class="font-semibold text-white text-lg mt-2">Miscellaneous Projects<span class="text-green-500">.</span></h2>
-            </div>
-
-            <div class="relative grid lg:grid-cols-2 gap-4 pb-10">
-              <h1 class="absolute left-3 text-lg italic text-slate-300 font-semibold top-4">MY BLENDER <br> PROJECTS</h1>
-              <a href="" class="rounded-xl font-bold text-xl "><img src="assets/iv.svg" alt="">
-                
-              </a>
-
-              <div class="bg-zinc-800 rounded-xl px-6 py-16">
-                <div class="mt-5 font-bold text-xl italic text-slate-300">
-                  WEBSITE
-                </div>
-              </div>
-
-          </header>
-        </section>
-      </div>
-    </section>
+  <section class="bg-gloom p-5">
+    <div class="mt-20">
+      <h2 class="text-white text-6xl font-medium">CONTACT</h2>
+      <h2 class="text-white text-lg mt-10 mb-16">I’m interested in cool stuff. <br> Are you minding a project? 
+      </h2>
+    </div>
+  </section>
 
   </body>
 </html>
