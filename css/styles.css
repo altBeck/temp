@@ -622,12 +622,20 @@ html {
   margin-top: 1rem;
 }
 
+.mt-10{
+  margin-top: 2.5rem;
+}
+
+.mb-1{
+  margin-bottom: 0.25rem;
+}
+
 .mt-20{
   margin-top: 5rem;
 }
 
-.mb-24{
-  margin-bottom: 6rem;
+.mb-36{
+  margin-bottom: 9rem;
 }
 
 .mt-5{
@@ -650,44 +658,12 @@ html {
   margin-top: 4rem;
 }
 
-.mt-10{
-  margin-top: 2.5rem;
-}
-
 .mb-16{
   margin-bottom: 4rem;
 }
 
-.mb-5{
-  margin-bottom: 1.25rem;
-}
-
 .mb-40{
   margin-bottom: 10rem;
-}
-
-.mb-20{
-  margin-bottom: 5rem;
-}
-
-.mt-24{
-  margin-top: 6rem;
-}
-
-.mt-36{
-  margin-top: 9rem;
-}
-
-.mb-36{
-  margin-bottom: 9rem;
-}
-
-.mt-40{
-  margin-top: 10rem;
-}
-
-.-mt-10{
-  margin-top: -2.5rem;
 }
 
 .box-border{
@@ -781,10 +757,6 @@ html {
 
 .items-center{
   align-items: center;
-}
-
-.justify-center{
-  justify-content: center;
 }
 
 .justify-between{
@@ -1083,10 +1055,6 @@ html {
     position: absolute;
   }
 
-  .md\:m-40{
-    margin: 10rem;
-  }
-
   .md\:mr-36{
     margin-right: 9rem;
   }
@@ -1095,28 +1063,24 @@ html {
     margin-left: 0px;
   }
 
-  .md\:mt-10{
-    margin-top: 2.5rem;
-  }
-
   .md\:-mt-16{
     margin-top: -4rem;
   }
 
-  .md\:mt-20{
-    margin-top: 5rem;
+  .md\:mt-10{
+    margin-top: 2.5rem;
   }
 
-  .md\:mb-20{
-    margin-bottom: 5rem;
+  .md\:mb-12{
+    margin-bottom: 3rem;
   }
 
-  .md\:mb-40{
-    margin-bottom: 10rem;
+  .md\:mb-36{
+    margin-bottom: 9rem;
   }
 
-  .md\:flex{
-    display: flex;
+  .md\:mb-16{
+    margin-bottom: 4rem;
   }
 
   .md\:hidden{
@@ -1127,20 +1091,12 @@ html {
     flex-direction: row;
   }
 
-  .md\:content-center{
-    align-content: center;
-  }
-
   .md\:justify-center{
     justify-content: center;
   }
 
   .md\:p-28{
     padding: 7rem;
-  }
-
-  .md\:p-40{
-    padding: 10rem;
   }
 
   .md\:pl-28{
@@ -1157,14 +1113,6 @@ html {
 
   .md\:pl-36{
     padding-left: 9rem;
-  }
-
-  .md\:pb-40{
-    padding-bottom: 10rem;
-  }
-
-  .md\:text-center{
-    text-align: center;
   }
 
   .md\:align-middle{
@@ -1200,11 +1148,5 @@ html {
 @media (max-width: 640px){
   .mob\:hidden{
     display: none;
-  }
-}
-
-@media (max-width: 1440px){
-  .dmax\:justify-center{
-    justify-content: center;
   }
 }
