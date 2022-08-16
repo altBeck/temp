@@ -7,10 +7,14 @@
     <title>Beck Kanno | Digital Product Designer</title>
     <link href="css/styles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
   </head>
   <body data-scroll-container class=" font-sans scrollbar-track-none h-screen scroll-smooth">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
+    
     <!-- Locomotive Scroll -->
-    <script type="text/javascript" src="/site/app/script.js"></script>
+    <script type="text/javascript" src="/site/app/app.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.1/dist/locomotive-scroll.min.js"></script>
 
@@ -31,8 +35,8 @@
             
           </button>
         </div>
-        <nav :class="{'flex': open, 'hidden': !open}" class=" absolute top-24 w-64 right-5 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg m-5 md:mr-36 md:ml-0 flex-col pb-4 place-items-center text-lg">
-          <a class="px-4 py-2 mt-2 text-md hover:text-lg hover:font-semibold" href="#" target="_blank">About</a>
+        <nav :class="{'flex': open, 'hidden': !open}" class=" absolute top-24 w-64 drop-shadow-2xl right-5 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg m-5 md:mr-36 md:ml-0 flex-col pb-4 place-items-center text-lg">
+          <a class="px-4 py-2 mt-2 text-md hover:text-lg hover:font-semibold" href="#" target="_blank">Work</a>
           <a class="px-4 py-2 mt-2 text-md hover:text-lg hover:font-semibold" href="https://drive.google.com/file/d/1QRSB8tpIieI8wQn52LVVZadEa8Kci0Nd/view?usp=sharing" target="_blank">Resume</a>
           <a class="px-4 py-2 mt-2 text-md hover:text-lg hover:font-semibold" href="#" target="_blank">Contact</a>
         </nav>
@@ -50,21 +54,32 @@
       </svg>        
     </div>
     <div>
-      <h2 class="mt-4 md:hidden text-sea">I’m a <a href="https://bradfrost.com/blog/post/frontend-design/" class="underline underline-offset-4" target="_blank">frontend-designer</a> <br> crafting people-centric <br> experiences for startups <br> & businesses.</h2>
+      <h2 class="mt-4 md:hidden text-sea">I’m a <a href="https://bradfrost.com/blog/post/frontend-design/" class="underline underline-offset-4" target="_blank">frontend-designer</a> <br> crafting people-centric <br> visual experiences for <br> startups & businesses.</h2>
 
-      <h2 class="mt-4 mob:hidden align-middle text-center text-sea">I’m a <a href="https://bradfrost.com/blog/post/frontend-design/" class="underline underline-offset-4" target="_blank">frontend-designer</a> crafting people-centric <br> experiences for startups & businesses.</h2>
+      <h2 class="mt-4 mob:hidden align-middle text-center text-sea">I’m a <a href="https://bradfrost.com/blog/post/frontend-design/" class="underline underline-offset-4" target="_blank">frontend-designer</a> crafting people-centric <br> visual experiences for startups & businesses.</h2>
     </div>
     <div class="flex flex-row max-w-screen mt-10 md:mb-16 tab:mb-24 md:align-middle md:justify-center">
 
       <ul class="mt-2 flex space-x-4 ml">
         <li>
-          <a href="https://dribbble.com/bekkr" target="_blank"><img src="assets/dribbble.svg" alt="Dribbble Icon"></a>
+          <a href="https://dribbble.com/bekkr" target="_blank"><svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M18.9608 13.0038C20.1784 14.5322 21.2698 16.1658 22.2191 17.8889C23.9359 17.2475 25.5529 16.4016 27.0406 15.3808C25.5335 13.7614 23.385 12.75 21 12.75C20.2956 12.75 19.6125 12.8381 18.9608 13.0038ZM27.9603 16.5687C26.4038 17.645 24.7133 18.5414 22.9191 19.2278C23.2046 19.8042 23.4745 20.3896 23.7284 20.9836C24.3901 20.886 25.0672 20.8354 25.7561 20.8354C26.9608 20.8354 28.1303 20.9902 29.2453 21.2813C29.2484 21.188 29.25 21.0942 29.25 21C29.25 19.3683 28.777 17.8486 27.9603 16.5687ZM29.0567 22.784C28.0072 22.4918 26.9005 22.3354 25.7561 22.3354C25.265 22.3354 24.7806 22.3642 24.3046 22.4203C24.9424 24.1202 25.4508 25.8834 25.8176 27.6981C27.4357 26.5321 28.6135 24.795 29.0567 22.784ZM24.445 28.4987C24.0722 26.4943 23.5192 24.5532 22.8035 22.6928C19.9486 23.3976 17.487 25.1016 15.8109 27.4141C17.2286 28.5627 19.0334 29.25 21 29.25C22.2309 29.25 23.3973 28.9809 24.445 28.4987ZM14.7262 26.3577C16.5588 23.9121 19.1869 22.0952 22.2272 21.2916C21.9947 20.7614 21.7488 20.2384 21.4899 19.723C19.2431 20.4221 16.8543 20.7988 14.378 20.7988C13.8323 20.7988 13.2907 20.7805 12.7539 20.7445C12.7513 20.8293 12.75 20.9145 12.75 21C12.75 23.0452 13.4934 24.9158 14.7262 26.3577ZM12.9352 19.2531C13.4121 19.2834 13.8933 19.2988 14.378 19.2988C16.6001 19.2988 18.7462 18.9755 20.7722 18.3735C19.8119 16.6639 18.7045 15.0478 17.4671 13.5424C15.1853 14.6253 13.4802 16.7247 12.9352 19.2531ZM17.4063 11.9339C18.5193 11.4923 19.7323 11.25 21 11.25C24.1506 11.25 26.9523 12.7452 28.7335 15.0617C29.9979 16.706 30.75 18.7662 30.75 21C30.75 21.4635 30.7176 21.9198 30.6549 22.3668C30.2164 25.49 28.3001 28.1359 25.6384 29.5779C24.2583 30.3257 22.6776 30.75 21 30.75C18.4059 30.75 16.047 29.7359 14.3008 28.084C12.423 26.3077 11.25 23.7902 11.25 21C11.25 20.61 11.2729 20.2251 11.3176 19.8466C11.7437 16.2337 14.1431 13.2284 17.4063 11.9339Z" fill="#ea4c89"/>
+            </svg>
+            </a>
         </li>
         <li>
-          <a href="https://linkedin.com/in/kanno-beck" target="_blank"><img src="assets/linkedin.svg" alt="Linkedin Icon"></a>
+          <a href="https://linkedin.com/in/kanno-beck" target="_blank"><svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.75 10.875C12.5764 10.875 11.625 11.8264 11.625 13C11.625 14.1736 12.5764 15.125 13.75 15.125C14.9236 15.125 15.875 14.1736 15.875 13C15.875 11.8264 14.9236 10.875 13.75 10.875Z" fill="#0072b1"/>
+            <path d="M11.75 16.875C11.681 16.875 11.625 16.931 11.625 17V30C11.625 30.069 11.681 30.125 11.75 30.125H15.75C15.819 30.125 15.875 30.069 15.875 30V17C15.875 16.931 15.819 16.875 15.75 16.875H11.75Z" fill="#0072b1"/>
+            <path d="M18.25 16.875C18.181 16.875 18.125 16.931 18.125 17V30C18.125 30.069 18.181 30.125 18.25 30.125H22.25C22.319 30.125 22.375 30.069 22.375 30V23C22.375 22.5027 22.5725 22.0258 22.9242 21.6742C23.2758 21.3225 23.7527 21.125 24.25 21.125C24.7473 21.125 25.2242 21.3225 25.5758 21.6742C25.9275 22.0258 26.125 22.5027 26.125 23V30C26.125 30.069 26.181 30.125 26.25 30.125H30.25C30.319 30.125 30.375 30.069 30.375 30V21.3802C30.375 18.9535 28.2644 17.055 25.8498 17.2745C25.1052 17.3422 24.369 17.5273 23.6815 17.8219L22.375 18.3819V17C22.375 16.931 22.319 16.875 22.25 16.875H18.25Z" fill="#0072b1"/>
+            </svg>
+            </a>
         </li>
         <li>
-          <a href="https://twitter.com/designrgodd" target="_blank"><img src="assets/twitter.svg" alt="Twitter Icon"></a>
+          <a href="https://twitter.com/designrgodd" target="_blank"><svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M30.8098 15.2272C30.8677 15.1465 30.7821 15.0422 30.6894 15.0781C30.0307 15.3334 29.3423 15.5057 28.64 15.5906C29.4219 15.1235 30.0253 14.4124 30.3599 13.5705C30.394 13.4848 30.3003 13.4082 30.2195 13.4528C29.4928 13.8541 28.7091 14.1431 27.8949 14.3096C27.8608 14.3165 27.8257 14.3049 27.8018 14.2797C27.1908 13.635 26.3866 13.2058 25.5098 13.0575C24.6147 12.906 23.6946 13.056 22.8938 13.4838C22.0931 13.9116 21.457 14.5931 21.0853 15.4214C20.7319 16.209 20.6365 17.0869 20.8108 17.93C20.8243 17.9955 20.7731 18.0572 20.7065 18.0531C19.1224 17.9547 17.5747 17.5334 16.1587 16.8145C14.7463 16.0974 13.4955 15.0998 12.4827 13.8833C12.4377 13.8293 12.3525 13.8363 12.3198 13.8984C12.0046 14.4965 11.8396 15.1631 11.84 15.8406C11.8387 16.515 12.0042 17.1792 12.3218 17.7742C12.6393 18.3691 13.099 18.8763 13.66 19.2506C13.0651 19.2344 12.4818 19.0873 11.9513 18.8207C11.8829 18.7863 11.8009 18.8352 11.8045 18.9117C11.8458 19.8009 12.1723 20.6936 12.7373 21.3786C13.3387 22.1074 14.1733 22.6062 15.1 22.7906C14.7433 22.8992 14.3729 22.9564 14 22.9606C13.7971 22.9582 13.5945 22.9433 13.3936 22.9158C13.319 22.9056 13.2582 22.9764 13.2843 23.0469C13.5607 23.7944 14.049 24.4467 14.6911 24.9228C15.3776 25.4318 16.2056 25.7142 17.06 25.7306C15.6172 26.8659 13.8359 27.4855 12 27.4906C11.8114 27.4912 11.6228 27.4851 11.4347 27.4723C11.3287 27.4651 11.2799 27.6063 11.3713 27.6605C13.1601 28.7221 15.2046 29.2831 17.29 29.2806C18.8297 29.2966 20.3572 29.0056 21.7831 28.4247C23.2091 27.8437 24.5051 26.9845 25.5952 25.8971C26.6854 24.8097 27.548 23.516 28.1326 22.0915C28.7172 20.667 29.0121 19.1403 29 17.6006V17.1208C29 17.0892 29.015 17.0595 29.0402 17.0405C29.7184 16.5283 30.3149 15.9169 30.8098 15.2272Z" fill="#00acee"/>
+            </svg>
+            </a>
         </li>
       </ul>
       
@@ -150,10 +165,76 @@
             <h2 class="text-white text-xl mt-10 mb-16">I’m interested in cool stuff. <br> Are you minding a project? 
             </h2>
           </div>
+
+          <div>
+            <div class="flex flex-row">
+              <script>
+                var clipboard = new ClipboardJS('.btn');
+              </script>
+  
+              <input id="foo" value="drkannobeck@gmail.com" class="flex flex-row justify-center text-center h-14 w-60 rounded-lg bg-green-600"></input>
+  
+              <button class="btn ml-4" data-clipboard-target="#foo">
+                <img src="assets/clipboard.svg" alt="Copy to clipboard">
+              </button>
+            </div>
+
+            <ul class="flex flex-row space-x-4 mt-8 mb-20">
+              <li>
+                <a href="https://dribbble.com/bekkr" target="_blank">
+                  <svg width="36" height="36" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.9608 13.0038C20.1784 14.5322 21.2698 16.1658 22.2191 17.8889C23.9359 17.2475 25.5529 16.4016 27.0406 15.3808C25.5335 13.7614 23.385 12.75 21 12.75C20.2956 12.75 19.6125 12.8381 18.9608 13.0038ZM27.9603 16.5687C26.4038 17.645 24.7133 18.5414 22.9191 19.2278C23.2046 19.8042 23.4745 20.3896 23.7284 20.9836C24.3901 20.886 25.0672 20.8354 25.7561 20.8354C26.9608 20.8354 28.1303 20.9902 29.2453 21.2813C29.2484 21.188 29.25 21.0942 29.25 21C29.25 19.3683 28.777 17.8486 27.9603 16.5687ZM29.0567 22.784C28.0072 22.4918 26.9005 22.3354 25.7561 22.3354C25.265 22.3354 24.7806 22.3642 24.3046 22.4203C24.9424 24.1202 25.4508 25.8834 25.8176 27.6981C27.4357 26.5321 28.6135 24.795 29.0567 22.784ZM24.445 28.4987C24.0722 26.4943 23.5192 24.5532 22.8035 22.6928C19.9486 23.3976 17.487 25.1016 15.8109 27.4141C17.2286 28.5627 19.0334 29.25 21 29.25C22.2309 29.25 23.3973 28.9809 24.445 28.4987ZM14.7262 26.3577C16.5588 23.9121 19.1869 22.0952 22.2272 21.2916C21.9947 20.7614 21.7488 20.2384 21.4899 19.723C19.2431 20.4221 16.8543 20.7988 14.378 20.7988C13.8323 20.7988 13.2907 20.7805 12.7539 20.7445C12.7513 20.8293 12.75 20.9145 12.75 21C12.75 23.0452 13.4934 24.9158 14.7262 26.3577ZM12.9352 19.2531C13.4121 19.2834 13.8933 19.2988 14.378 19.2988C16.6001 19.2988 18.7462 18.9755 20.7722 18.3735C19.8119 16.6639 18.7045 15.0478 17.4671 13.5424C15.1853 14.6253 13.4802 16.7247 12.9352 19.2531ZM17.4063 11.9339C18.5193 11.4923 19.7323 11.25 21 11.25C24.1506 11.25 26.9523 12.7452 28.7335 15.0617C29.9979 16.706 30.75 18.7662 30.75 21C30.75 21.4635 30.7176 21.9198 30.6549 22.3668C30.2164 25.49 28.3001 28.1359 25.6384 29.5779C24.2583 30.3257 22.6776 30.75 21 30.75C18.4059 30.75 16.047 29.7359 14.3008 28.084C12.423 26.3077 11.25 23.7902 11.25 21C11.25 20.61 11.2729 20.2251 11.3176 19.8466C11.7437 16.2337 14.1431 13.2284 17.4063 11.9339Z" fill="white"/>
+                    </svg>
+                  </a>
+              </li>
+
+              <li>
+                <a href="https://linkedin.com/in/kanno-beck" target="_blank"><svg width="36" height="36" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.75 10.875C12.5764 10.875 11.625 11.8264 11.625 13C11.625 14.1736 12.5764 15.125 13.75 15.125C14.9236 15.125 15.875 14.1736 15.875 13C15.875 11.8264 14.9236 10.875 13.75 10.875Z" fill="white"/>
+                  <path d="M11.75 16.875C11.681 16.875 11.625 16.931 11.625 17V30C11.625 30.069 11.681 30.125 11.75 30.125H15.75C15.819 30.125 15.875 30.069 15.875 30V17C15.875 16.931 15.819 16.875 15.75 16.875H11.75Z" fill="white"/>
+                  <path d="M18.25 16.875C18.181 16.875 18.125 16.931 18.125 17V30C18.125 30.069 18.181 30.125 18.25 30.125H22.25C22.319 30.125 22.375 30.069 22.375 30V23C22.375 22.5027 22.5725 22.0258 22.9242 21.6742C23.2758 21.3225 23.7527 21.125 24.25 21.125C24.7473 21.125 25.2242 21.3225 25.5758 21.6742C25.9275 22.0258 26.125 22.5027 26.125 23V30C26.125 30.069 26.181 30.125 26.25 30.125H30.25C30.319 30.125 30.375 30.069 30.375 30V21.3802C30.375 18.9535 28.2644 17.055 25.8498 17.2745C25.1052 17.3422 24.369 17.5273 23.6815 17.8219L22.375 18.3819V17C22.375 16.931 22.319 16.875 22.25 16.875H18.25Z" fill="white"/>
+                  </svg>
+                </a>
+              </li>
+
+              <li>
+                <a href="https://twitter.com/designrgodd" target="_blank"><svg width="36" height="36" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M30.8098 15.2272C30.8677 15.1465 30.7821 15.0422 30.6894 15.0781C30.0307 15.3334 29.3423 15.5057 28.64 15.5906C29.4219 15.1235 30.0253 14.4124 30.3599 13.5705C30.394 13.4848 30.3003 13.4082 30.2195 13.4528C29.4928 13.8541 28.7091 14.1431 27.8949 14.3096C27.8608 14.3165 27.8257 14.3049 27.8018 14.2797C27.1908 13.635 26.3866 13.2058 25.5098 13.0575C24.6147 12.906 23.6946 13.056 22.8938 13.4838C22.0931 13.9116 21.457 14.5931 21.0853 15.4214C20.7319 16.209 20.6365 17.0869 20.8108 17.93C20.8243 17.9955 20.7731 18.0572 20.7065 18.0531C19.1224 17.9547 17.5747 17.5334 16.1587 16.8145C14.7463 16.0974 13.4955 15.0998 12.4827 13.8833C12.4377 13.8293 12.3525 13.8363 12.3198 13.8984C12.0046 14.4965 11.8396 15.1631 11.84 15.8406C11.8387 16.515 12.0042 17.1792 12.3218 17.7742C12.6393 18.3691 13.099 18.8763 13.66 19.2506C13.0651 19.2344 12.4818 19.0873 11.9513 18.8207C11.8829 18.7863 11.8009 18.8352 11.8045 18.9117C11.8458 19.8009 12.1723 20.6936 12.7373 21.3786C13.3387 22.1074 14.1733 22.6062 15.1 22.7906C14.7433 22.8992 14.3729 22.9564 14 22.9606C13.7971 22.9582 13.5945 22.9433 13.3936 22.9158C13.319 22.9056 13.2582 22.9764 13.2843 23.0469C13.5607 23.7944 14.049 24.4467 14.6911 24.9228C15.3776 25.4318 16.2056 25.7142 17.06 25.7306C15.6172 26.8659 13.8359 27.4855 12 27.4906C11.8114 27.4912 11.6228 27.4851 11.4347 27.4723C11.3287 27.4651 11.2799 27.6063 11.3713 27.6605C13.1601 28.7221 15.2046 29.2831 17.29 29.2806C18.8297 29.2966 20.3572 29.0056 21.7831 28.4247C23.2091 27.8437 24.5051 26.9845 25.5952 25.8971C26.6854 24.8097 27.548 23.516 28.1326 22.0915C28.7172 20.667 29.0121 19.1403 29 17.6006V17.1208C29 17.0892 29.015 17.0595 29.0402 17.0405C29.7184 16.5283 30.3149 15.9169 30.8098 15.2272Z" fill="white"/>
+                  </svg>
+                  </a>
+              </li>
+            </ul>
+      
+          </div>
+
         </section>
+
       </section>
     </div>
   </section>
+  
+  <footer class="bg-gloom font-medium text-center">
+    <img src="assets/footer-img.svg" alt="Footer Image">
+    <div class="mt-10" className="footer-container">
+      <div className="footer-content">
+        
+        <p id="credit" class=" text-gray-500 dark:text-gray-400 pb-10 pr-4 pl-4">&copy; 2021 <span class="text-gray-200"> Beck</span><span class="text-green-500">.</span> This site was designed in 
+                 
+          <a href="https://www.figma.com/" class="text-black hover:text-purple-800 dark:text-amber-300 dark:hover:text-amber-500" target="_blank" rel="noreferrer" title="Figma">Figma</a>,
+  
+          <a href="https://tailwindcss.com/" class="text-black hover:text-purple-800 dark:text-amber-300 dark:hover:text-amber-500" target="_blank" rel="noreferrer" title="tailwindcss">tailwindcss</a> 
+  
+          with a sprinkle of
+  
+          <a href="https://javascript.com/" class="text-black hover:text-purple-800 dark:text-amber-300 dark:hover:text-amber-500" target="_blank" rel="noreferrer" title="javascript">js</a>
+  
+          &amp;
+  
+          <a href="https://www.netlify.com/" class="text-black hover:text-purple-800 dark:text-amber-300 dark:hover:text-amber-500" target="_blank" rel="noreferrer" title="netlify">deployed via Netlify</a>.
+        </p>
+      </div>
+    </div>
+  </footer>
 
 
   </body>
