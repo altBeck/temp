@@ -35,10 +35,18 @@
             
           </button>
         </div>
-        <nav :class="{'flex': open, 'hidden': !open}" class=" absolute top-24 w-64 drop-shadow-lg right-5 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg m-5 md:mr-36 md:ml-0 flex-col pb-4 place-items-center text-lg">
-          <a class="px-4 py-2 mt-2 text-md hover:text-lg hover:font-semibold" href="#" target="_blank">About me</a>
-          <a class="px-4 py-2 mt-2 text-md hover:text-lg hover:font-semibold" href="https://drive.google.com/file/d/1QRSB8tpIieI8wQn52LVVZadEa8Kci0Nd/view?usp=sharing" target="_blank">Resume</a>
-          <a class="px-4 py-2 mt-2 text-md hover:text-lg hover:font-semibold" href="#" target="_blank">Contact</a>
+        <nav :class="{'flex': open, 'hidden': !open}" class=" absolute top-24 w-48 drop-shadow-lg right-5 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg m-5 md:mr-36 md:ml-0 flex-col mb-4 p-3 text-md">
+          <a class="flex p-3 mt-2 text-md hover:rounded-md hover:bg-gradient-to-r from-cyan-500 to-blue-600 space-x-2" href="about-me.html">
+            <img src="assets/user.svg" alt="user"/><div>About me</div>
+          </a>
+
+          <a class="flex p-3 mt-2 text-md hover:rounded-md hover:bg-gradient-to-r from-cyan-500 to-blue-600 space-x-2" href="https://drive.google.com/file/d/1QRSB8tpIieI8wQn52LVVZadEa8Kci0Nd/view?usp=sharing" target="_blank"><img src="assets/resume.svg" alt="Resume"/>
+            <div>Resume</div>
+          </a>
+
+          <a class="flex p-3 mt-2 text-md hover:rounded-md hover:bg-gradient-to-r from-cyan-500 to-blue-600 space-x-2" href="mailto:drkannobeck@gmail.com" target="_blank"><img src="assets/mail.svg" alt="Mailbox">
+            <div>Contact</div>
+          </a>
         </nav>
       </div>
     </div>
@@ -54,7 +62,7 @@
       </svg>        
     </div>
     <img class="absolute -mt-48 lg:ml-32 -z-50 -rotate-12" src="./assets/uid.svg" alt="ui designer image">
-    <img class="absolute mt-16 ml-36 md:ml-128 lg:ml-148 -z-50 -rotate-45" src="./assets/fed.svg" alt="frontend developer image">
+
     <div>
       <h2 class="mt-4 md:hidden text-sea">I’m a <a href="https://bradfrost.com/blog/post/frontend-design/" class="underline underline-offset-4" target="_blank">frontend-designer</a> <br> crafting people-centric <br> visual experiences for <br> startups & businesses.</h2>
 
@@ -85,6 +93,7 @@
             </a>
         </li>
       </ul>
+      <img class="absolute ml-36 lg:ml-64 -z-50 -rotate-45" src="./assets/fed.svg" alt="frontend developer image">
       
     </div>
     <div class="flex flex-row align-middle md:justify-center mt-20 md:mb-36">
@@ -94,7 +103,6 @@
         <path d="M19 12L12 19L5 12" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>        
     </div>
-
   </section>
       
   <section id="portfolio" class="p-5 md:p-28 md:-mt-16 bg-gloom">
