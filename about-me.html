@@ -11,7 +11,7 @@
 
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
-  <section id="section" class="sticky md:pl-28 md:pr-28">
+  <section id="section" class="md:pl-28 md:pr-28">
     
     <div class="box-border flex flex-row justify-between p-5">
       <div class="p-4">
@@ -21,7 +21,7 @@
       </div>
   
       <div x-data="{ open: false }" class="p-4">
-        <button aria-label="Menu_Button" class="rounded-lg  focus:outline-none focus:shadow-outline " @click="open = !open">              
+        <button aria-label="Menu_Button" class="rounded-lg focus:outline-none focus:shadow-outline " @click="open = !open">              
           <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="27" cy="27" r="26" stroke="#3A3A3E" stroke-width="1"/>
             <path  x-show="!open" fill-rule="evenodd" d="M18 21H36 M18 33H36 M18 27H36" stroke="#3A3A3E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" clip-rule="evenodd"/>
@@ -49,14 +49,13 @@
   <section id="section" class="md:pl-28 md:pr-28">
     <div class="text-justify mt-44 p-10">
       <h1 class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500 mb-5 font-bold text-4xl">Hi, I’m Beck.</h1>
-      <p class="text-lg md:text-2xl">        
-        I am a freelance UI/UX designer and creative developer based in Port Harcourt, Nigeria. I am an Electrical Engineering graduate and later switched to the awesome world of designing digital interfaces and products.
+      <p class="text-lg md:text-2xl font-medium">        
+        I am a freelance UI/UX designer and creative developer based in Port Harcourt, Nigeria. I am an Electrical Engineering graduate and later switched to designing digital interfaces and products.
       </p>
-      <p class="mt-5">
-        I started on the marketing design side, honing my visual design skills and learning the ins and outs of keyframe animation, then moved into the world of product.
-        As a designer, I enjoy being a generalist with a focus on craft and prototyping. I value beautiful visuals backed by smart systems thinking. I love the concept that a digital product is a living thing that can adapt and evolve over time.
+      <p class="mt-5 text-lg">
+        As a designer, I enjoy being a generalist with a focus on prototyping seamless design systems and crafting beautiful digital user interfaces. I consider myself a <a href="https://bradfrost.com/blog/post/frontend-design/" class="underline underline-offset-4 hover:bg-green-500" target="_blank">frontend-designer</a>, or basically a designer who also codes. I value beautiful visuals backed by smart systems thinking. I love the concept that a digital product is a living thing that can adapt and evolve over time.
+        I dabble in 3D graphic design, UX/UI design and I also write HTML, CSS, and presentational javascript that powers the web user interfaces I work on, with a focus on responsive design, accessibility and performance.
       </p>
-
     </div>
   </section>
   
