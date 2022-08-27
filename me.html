@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Beck</title>
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body class="font-sans h-screen">
+
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+  <section id="section" class="md:pl-28 md:pr-28">
+    
+    <div class="box-border flex flex-row justify-between p-5">
+      <div class="p-4">
+        <a class="fixed" href="index.html">
+          <img src="assets/back-btn.svg" alt="Back Button">
+        </a>
+      </div>
+  
+      <div x-data="{ open: false }" class="p-3">
+        <button aria-label="Menu_Button" class="rounded-lg focus:outline-none focus:shadow-outline " @click="open = !open">              
+          <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="27" cy="27" r="26" stroke="#3A3A3E" stroke-width="1"/>
+            <path  x-show="!open" fill-rule="evenodd" d="M18 21H36 M18 33H36 M18 27H36" stroke="#3A3A3E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" clip-rule="evenodd"/>
+            <path x-show="open" d="M33 21L21 33 M21 21L33 33" stroke="#3A3A3E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" clip-rule="evenodd"/>
+          </svg>     
+        </button>
+    
+        <nav :class="{'flex': open, 'hidden': !open}" class="absolute top-24 w-48 drop-shadow-lg right-5 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg m-5 md:mr-36 md:ml-0 flex-col mb-4 p-2 text-md text-white">
+          <a class="flex p-3 mt-2 text-md hover:rounded hover:bg-gradient-to-r from-cyan-500 to-blue-600 space-x-2" href="me.html">
+            <img src="assets/user.svg" alt="user"/><div>About me</div>
+          </a>
+
+          <a class="flex p-3 mt-2 text-md hover:rounded hover:bg-gradient-to-r from-cyan-500 to-blue-600 space-x-2" href="https://drive.google.com/file/d/1QRSB8tpIieI8wQn52LVVZadEa8Kci0Nd/view?usp=sharing" target="_blank"><img src="assets/resume.svg" alt="Resume"/>
+            <div>Resume</div>
+          </a>
+
+          <a class="flex p-3 mt-2 text-md hover:rounded hover:bg-gradient-to-r from-cyan-500 to-blue-600 space-x-2" href="mailto:drkannobeck@gmail.com" target="_blank"><img src="assets/mail.svg" alt="Mailbox">
+            <div>Contact</div>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <section id="section" class="md:pl-28 md:pr-28">
+    <div class="text-justify mt-44 p-10">
+      <h1 class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500 mb-5 font-bold text-4xl">Hi, I’m Beck.</h1>
+      <p class="text-lg md:text-2xl font-medium">        
+        I am a freelance UI/UX designer and creative developer based in Port Harcourt, Nigeria. I am an Electrical Engineering graduate and later switched to designing digital interfaces and products.
+      </p>
+      <p class="mt-5 text-lg">
+        As a designer, I enjoy being a generalist with a focus on prototyping seamless design systems and crafting beautiful digital user interfaces. I consider myself a <a href="https://bradfrost.com/blog/post/frontend-design/" class="underline underline-offset-4 hover:bg-cyan-300" target="_blank">frontend-designer</a>, or basically a designer who also codes. I love the concept that a digital product is a living thing that can adapt and evolve over time.
+      </p>
+
+      <div class="mt-10 bg-sand hover:bg-cyan-300 p-6 w-64 rounded-xl">
+        <h1 class="text-lg font-semibold my-3">Services I Offer</h1>
+        <ul class="space-y-2 font-medium">
+          <li>📱 User Interface Design</li>
+          <li>🔎 User Experience</li>
+          <li>🤖 Prototyping</li>
+          <li>👾 3D Design</li>
+          <li>💻 Web Development</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  
+</body>
+</html>
